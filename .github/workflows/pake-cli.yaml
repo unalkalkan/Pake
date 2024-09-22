@@ -138,7 +138,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: output-${{ inputs.platform }}.zip
-          path: node_modules/pake-cli/output/*
+          path: |
+            /home/runner/work/Pake/Pake/node_modules/pake-cli/*.deb
+            /home/runner/work/Pake/Pake/node_modules/pake-cli/*.AppImage
           retention-days: 3
 
       - name: Rust cache store
